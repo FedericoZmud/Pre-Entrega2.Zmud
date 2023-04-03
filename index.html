@@ -1,23 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    
-    <title>PreEntrega</title>
-</head>
-<body>
-    <h1>Conversor de divisas</h1>
-    <h2>elija la divisa a convertir</h2>
-    <div>
-        <input type="checkbox" name="dolar" id="">
-        <input type="checkbox" name="euro" id="">
-        <input type="checkbox" name="real" id="">
 
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PreEntrega</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./estilos.css">
+  <script defer src="./index.js"></script>
+
+</head>
+
+<body>
+  <div class="cuerpo">
+    <h1 class="container text-center">Conversor de divisas</h1>
+    <div class="card text-bg-dark container ">
+      <img src="./img/money.jgp.jpg" class="card-img" alt="...">
+      <div class="card-img-overlay">
+        <h2 class="card-title">Elija la divisa a convertir</h2>
+        <head>
+          <title>Conversor de divisas</title>
+        
+        
+          <label for="divisaOrigen">Divisa origen:</label>
+          <select id="divisaOrigen"></select>
+          <br /><br />
+          <label for="divisaDestino">Divisa destino:</label>
+          <select id="divisaDestino"></select>
+          <br /><br />
+          <label for="cantidad">Cantidad:</label>
+          <input type="number" id="cantidad" />
+          <br /><br />
+          <button onclick="convertirDivisas()">Convertir</button>
+          <br /><br />
+          <div id="resultado"></div>
+
+          <button onclick="mostrarFormulario()">Agregar moneda</button>
+
+        <div id="formularioAgregarMoneda" style="display: none">
+        <h2>Agregar moneda</h2>
+    
+        <label for="nombreMoneda">Nombre de la moneda:</label>
+        <input type="text" id="nombreMoneda">
+    
+        <label for="tasaCambioMoneda">Tasa de cambio con el euro:</label>
+        <input type="number" id="tasaCambioMoneda" step="0.01">
+    
+        <button onclick="agregarMoneda()">Agregar</button>
+        </div>
+      </form>
+      </div>
+      
     </div>
-    <p>coloque el monto que desea convertir</p>
-<script src="./index.js"></script>   
+    
+    
+  </div>
 </body>
+
 </html>
